@@ -51,6 +51,7 @@ class Feedback(db.Model):
 	feedback_b = db.Column(db.String(500), nullable = False)
 	feedback_c = db.Column(db.String(500), nullable = False)
 	feedback_d = db.Column(db.String(500), nullable = False)
+db.create_all()
 
 @app.route('/')
 @app.route('/index')
