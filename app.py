@@ -33,7 +33,7 @@ class Courses(db.Model):
 
 class Grades(db.Model):
 	__tablename__ = 'Grades'
-	username = db.Column(db.Integer, db.ForeignKey(Person.username), nullable = False, primary_key = True)
+	username = db.Column(db.String(20), db.ForeignKey(Person.username), nullable = False, primary_key = True)
 	assignment = db.Column(db.String(50), nullable = False, primary_key = True)
 	grade = db.Column(db.Float, nullable = False)
 	outof = db.Column(db.Integer, nullable = False)
